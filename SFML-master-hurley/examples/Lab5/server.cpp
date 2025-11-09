@@ -1,3 +1,14 @@
+/*
+Author: Margaret Killmeyer
+Class: ECE6122 (Q)
+Last Date Modified: 9 Nov. 2025
+
+Description:
+Lab 5 - Server
+Main code for Server Debug Logging Application
+Receives status messages and saves messages to a file
+*/
+
 // Import libraries
 #include <iostream>
 #include <fstream>
@@ -128,7 +139,7 @@ int main(int argc, char *argv[])
 
                     // Only try to process message if the client is ready
                     if (selector.isReady(*client))
-                    {   
+                    {
                         char buffer[1024];
                         std::size_t received;
 
@@ -136,7 +147,7 @@ int main(int argc, char *argv[])
                         sf::Socket::Status status = client->receive(buffer, sizeof(buffer), received);
 
                         unsigned short remotePort = client->getRemotePort();
-                        
+
                         // If a message was received, print the message to log and console
                         if (status == sf::Socket::Done)
                         {

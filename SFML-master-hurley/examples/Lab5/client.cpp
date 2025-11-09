@@ -5,7 +5,8 @@ Last Date Modified: 9 Nov. 2025
 
 Description:
 Lab 5 - Client
-Main code for Client Debug Logging Application, sends status messages to a central logging server and saves messages to a file 
+Main code for Client Debug Logging Application
+Sends status messages to a central logging server and saves messages to a file 
 */
 
 #include <iostream>
